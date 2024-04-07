@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/*navbar*/
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(21, 21, 115, 0.486);
+    position: sticky;
+    padding: 20px 90px;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.left-navbar h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.right-navbar input{
+    border: none;
+    padding: 8px 0 8px 8px;
+    width: 10rem;
+    outline: none;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.right-navbar label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.right-navbar label:hover {
+    cursor: pointer;
+}
+
+.search-btn {
+    padding: 10px;
+    border: none;
+    background-color: rgba(42, 42, 226, 0.774);
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+.search-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/*content section*/
+
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.blog-post {
+    border: 1px dotted rgba(63, 63, 181, 0.683);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 350px;
+   cursor: pointer;
+}
+
+.blog-post img {
+    width: 100%;
+}
+
+.blog-post h2 {
+    font-size: 1.3rem;
+}
+
+.blog-post p {
+    color: rgb(97, 90, 90);
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px){
+    .navbar {
+        padding: 20px 40px;
+    }
+
+    .right-navbar label {
+        display: none;
+    }
+
+    .right-navbar input {
+        width: 7rem;
+    }
+}
